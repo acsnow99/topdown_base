@@ -1,8 +1,7 @@
 dash = 0;
 room_change = false;
 immovable = false;
-jumping = false;
-move_speed = 200;
+move_speed = 400;
 lag = false;
 ded = false;
 
@@ -18,6 +17,7 @@ alarmvar_topside = 0;
 alarmvar_roomchange = 0;
 alarm1_activated = false;
 alarm2_activated = false;
+alarm_var2 = 5000000000000000;
 
 room_coming = 0;
 

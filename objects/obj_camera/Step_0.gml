@@ -1,6 +1,5 @@
 if (obj_player.room_change == true){
-	alarm_variable1--;
-	if (alarm_variable1 <= global.gametime + 0.5){
+	if (alarm_variable1 <= global.gametime){
 		room_change = true;
 		alarm_variable1 = global.gametime + 0.5;
 	}

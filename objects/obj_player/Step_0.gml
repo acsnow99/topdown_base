@@ -64,7 +64,7 @@ if (keyboard_check(vk_control)) {
 }
 
 //set the spawn point when touching a pit boundary object
-with (instance_nearest(x, y, obj_spawnpoint_pit)) {
+/*with (instance_nearest(x, y, obj_spawnpoint_pit)) {
 	if (place_meeting(x, y, obj_player) and not other.jumping and not other.pitfall) {
 		other.spawnx_pit = x;
 		other.spawny_pit = y;
@@ -111,12 +111,7 @@ if (distance_to_object(obj_pit) <= 25 and not jumping) {
 if (distance_to_object(obj_pit) > 25) {
 	pitfall = false;
 	pitfall_spd = 0.075;
-}
-
-for (var i = 59; i > 0; --i) {
-	xlist[i] = xlist[i-1];
-	ylist[i] = ylist[i-1];
-}
+}*/
 
 if (alarm_var2 <= global.gametime) {
 	room_goto(room_coming);
