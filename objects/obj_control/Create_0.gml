@@ -3,7 +3,6 @@ spawnx = obj_player.x;
 spawny = obj_player.y;
 spawnroom = 0;
 
-global.test = false;
 global.playerx = 0;
 global.playery = 0;
 global.rooms_passed = 0;

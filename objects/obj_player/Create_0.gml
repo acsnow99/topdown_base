@@ -11,11 +11,6 @@ pitfall = false;
 spawnx_pit = 0;
 spawny_pit = 0;
 
-for (var i = 0; i < 60; ++i) {
-	xlist[i] = 0;
-	ylist[i] = 0;
-}
-
 alarmvar_rightside = 0;
 alarmvar_leftside = 0;
 alarmvar_bottomside = 0;

@@ -1,7 +1,7 @@
-alarm_variable1 = global.gametime 30 * 1000;
+alarm_variable1 = global.gametime + 0.5;
 
-view_width = 7680/6;
-view_height = 4320/6;
+view_width = 7680/3;
+view_height = 4320/3;
 
 window_scale = 3;
 

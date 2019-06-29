@@ -6,8 +6,7 @@
     "children": [
         "043a9e73-3f81-413a-954c-936ae636ebfc",
         "5a0ec472-5d7b-46f0-b244-230b395b0785",
-        "7aa1cf02-790d-419f-b9a9-d4775e1898d4",
-        "52102241-e18e-40dc-8fa5-b2ac9fcd3f3d"
+        "0fc8afe3-5442-46c4-b3f3-9b010d5d6202"
     ],
     "filterType": "GMObject",
     "folderName": "grp_runners",

@@ -11,7 +11,7 @@ if (room_change == false) {
 		global.playerx = 2825;
 		if (room == 0) {
 			global.playery = 900;
-			room_coming = 1;
+			room_coming = room_exploreAgain;
 		}
 	}
 	if (x >= 2800) {
@@ -22,7 +22,7 @@ if (room_change == false) {
 		global.playerx = -25;
 		if (room == 1) {
 			global.playery = 1825;
-			room_coming = 0;
+			room_coming = room_explore;
 		}	
 	}
 	if (y < 0) {
@@ -33,7 +33,7 @@ if (room_change == false) {
 		global.playery = 2025;
 		if (room == 0) {
 			global.playerx = 1720;
-			room_coming = 2;
+			room_coming = room_exploreAThirdTime;
 		}
 	}
 	if (y > 2000) {
@@ -44,10 +44,10 @@ if (room_change == false) {
 		global.playery = -25;
 		if (room == 2) {
 			global.playerx = 1280;
-			room_coming = 0;
+			room_coming = room_explore;
 		}
 	}
-	alarm[3] = 30; //waits 30 steps to move to the next room
+	alarm_var2 = global.gametime + 0.5; //waits a half second to move to the next room
 }
 
 room_change = true;

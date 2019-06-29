@@ -25,46 +25,6 @@
             "m_owner": "51ebbdfc-1f66-4997-8873-8096adfcb9ce"
         },
         {
-            "id": "0dac9d22-6569-4137-8d38-14c75f2084a6",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "5e8769ff-0d9e-4d41-86ba-dc1510efa9f1",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "51ebbdfc-1f66-4997-8873-8096adfcb9ce"
-        },
-        {
-            "id": "70affab0-30dc-499f-b2fd-487e5fa0e391",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "a63e399f-2471-48c1-bc0b-31642ffb6853",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "51ebbdfc-1f66-4997-8873-8096adfcb9ce"
-        },
-        {
-            "id": "884f5fad-7b78-4dc1-a68f-9ff56c9f6fcd",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 2,
-            "m_owner": "51ebbdfc-1f66-4997-8873-8096adfcb9ce"
-        },
-        {
-            "id": "7568c282-78e1-49ce-9c5d-487ce2cfba0a",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 1,
-            "eventtype": 2,
-            "m_owner": "51ebbdfc-1f66-4997-8873-8096adfcb9ce"
-        },
-        {
             "id": "bd2650ab-350b-4ad8-98e0-492ca94bcf68",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -82,16 +42,6 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 7,
-            "m_owner": "51ebbdfc-1f66-4997-8873-8096adfcb9ce"
-        },
-        {
-            "id": "338c3551-21f8-455a-acd0-b59c402ded0d",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 3,
-            "eventtype": 2,
             "m_owner": "51ebbdfc-1f66-4997-8873-8096adfcb9ce"
         },
         {

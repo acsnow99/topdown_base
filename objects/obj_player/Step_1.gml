@@ -3,8 +3,7 @@ if (health <= 0) {
 	y = -1;
 	ded = true;
 	room_change = true;
-	alarmvar_roomchange = 5;
-	alarm2_activated = false;
+	alarmvar_roomchange = global.gametime + 0.1;
 	
 	obj_camera.alarm_variable1 = 1;
 	

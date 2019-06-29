@@ -49,20 +49,10 @@ else if alarm1_activated == false { //only activates the alarm effect once, so r
 
 #endregion
 
-if alarmvar_roomchange > 0 {
-	alarmvar_roomchange--
-}
-else if alarm2_activated == false {
+if (alarmvar_roomchange <= global.gametime) {
 	room_change = false;
-	alarm2_activated = true;
+	alarmvar_roomchange += 50000000000000000000;
 }
-
-#region jumping?
-if (keyboard_check(vk_space) and not immovable and not jumping and not room_change and not pitfall) {
-	jumping = true;
-	instance_create_layer(x, y, "ForegroundFX", obj_exploreblock_jump);
-}
-#endregion
 
 //auto-heal
 if (health <= 100) {
@@ -73,33 +63,9 @@ if (keyboard_check(vk_control)) {
 	health = 0;
 }
 
-#region dashing setup
-if keyboard_check(vk_shift)
-{
-	if dash = 1
-	{
-		if distance_to_object(obj_launchpad) = 0
-		{
-			instance_create_layer(x,y, "player", obj_exploreblock_dash);
-			if image_index = 0
-			{
-				obj_exploreblock_dash.color = 0;
-			}
-			else
-			{
-				obj_exploreblock_dash.color = 1;
-			}
-			x = 1;
-			y = 1;
-		}
-	}
-}
-
-#endregion
-
 //set the spawn point when touching a pit boundary object
 with (instance_nearest(x, y, obj_spawnpoint_pit)) {
-	if (place_meeting(x, y, obj_exploreblock) and not other.jumping and not other.pitfall) {
+	if (place_meeting(x, y, obj_player) and not other.jumping and not other.pitfall) {
 		other.spawnx_pit = x;
 		other.spawny_pit = y;
 	}
@@ -119,8 +85,6 @@ if (distance_to_object(obj_pit) <= 25 and not jumping) {
 			x = spawnx_pit;
 			y = spawny_pit;
 			
-			scr_arrayReset(xlist, ylist, 60);
-			
 			health -= 10;
 	}
 	else if (instance_exists(obj_pit_bottomful)
@@ -136,8 +100,8 @@ if (distance_to_object(obj_pit) <= 25 and not jumping) {
 			global.playerx = x;
 			global.playery = y;
 	
-			room_coming = 3;
-			alarm[3] = 30;
+			room_coming = room_basement;
+			alarm_var2 = global.gametime + 30*1000
 	
 			room_change = true;
 			global.rooms_passed += 1;
@@ -154,90 +118,20 @@ for (var i = 59; i > 0; --i) {
 	ylist[i] = ylist[i-1];
 }
 
-xlist[0] = x;
-ylist[0] = y;
-
-#region old movement code
-/*if not place_meeting(x+4, y, obj_wall)
-	{
-		if keyboard_check(vk_right)
-		{
-			if not keyboard_check(vk_down)
-			{
-				if not keyboard_check(vk_up)
-				{
-					obj_exploreblock.x += 3
-				}
-			}
-		}
+if (alarm_var2 <= global.gametime) {
+	room_goto(room_coming);
+	/*
+	if room_coming == 0 {
+		room_goto(room_explore);
 	}
-
-	if not place_meeting(x-4, y, obj_wall)
-	{
-		if keyboard_check(vk_left)
-		{
-			if not keyboard_check(vk_down)
-			{
-				if not keyboard_check(vk_up)
-				{
-					obj_exploreblock.x -= 3
-				}
-			}
-		}
+	else if room_coming == 1 {
+		room_goto(room_exploreAgain);
 	}
-
-	if not place_meeting(x, y-4, obj_wall)
-	{
-		if keyboard_check(vk_up)
-		{
-			if keyboard_check(vk_right)
-			{
-				if not place_meeting(x+4, y-4, obj_wall)
-				{
-					obj_exploreblock.x += 2.2
-					obj_exploreblock.y -= 2.2
-				}
-			}
-			else if keyboard_check(vk_left)
-			{
-				if not place_meeting(x-4, y-4, obj_wall)
-				{
-					obj_exploreblock.x -= 2.2
-					obj_exploreblock.y -= 2.2
-				}
-			}
-			else
-			{
-				obj_exploreblock.y -= 3
-			}
-		}
+	else if room_coming == 2 {
+		room_goto(room_exploreAThirdTime);
 	}
-
-	if not place_meeting(x, y+4, obj_wall)
-	{
-		if keyboard_check(vk_down)
-		{
-			if keyboard_check(vk_right)
-			{
-				if not place_meeting(x+4, y+4, obj_wall)
-				{
-					obj_exploreblock.x += 2.2
-						obj_exploreblock.y += 2.2
-				}
-			}
-			else if keyboard_check(vk_left)
-			{
-				if not place_meeting(x-2, y+2, obj_wall)
-				{
-					obj_exploreblock.x -= 2.2
-					obj_exploreblock.y += 2.2
-				}
-			}
-			else
-			{
-				obj_exploreblock.y += 3
-			}
-		}
-	}
-	*/
-#endregion
+	else if room_coming == 3 {
+		room_goto(room_basement);
+	}*/
+	alarm_var2 += 50000000000000000000;
+}
