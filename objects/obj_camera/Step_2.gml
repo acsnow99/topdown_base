@@ -20,19 +20,9 @@ if (instance_exists(obj_player) and not (obj_player.x == 1 and obj_player.y == 1
 	#endregion
 	
 	if (room == 0) {
-		if (obj_player.x >= -25 and obj_player.x <= 1400 and obj_player.y >= -25 and obj_player.y <= 700){
-			_x = clamp(obj_player.x - view_width / 2, 0, 1400 - view_width);
-			_y = clamp(obj_player.y - view_height / 2, 0, 720 - view_height);
-			assigned = true;
-		}
-		else if (obj_player.x > 1400 and obj_player.x <= 2825 and obj_player.y >= -25 and obj_player.y <= 2025){
-			_x = clamp(obj_player.x - view_width / 2, 1400, 2800 - view_width);
+		if (obj_player.x >= -25 and obj_player.x <= 2825 and obj_player.y >= -25 and obj_player.y <= 2025){
+			_x = clamp(obj_player.x - view_width / 2, 0, 2800 - view_width);
 			_y = clamp(obj_player.y - view_height / 2, 0, 2000 - view_height);
-			assigned = true;
-		}
-		else if (obj_player.x >= -25 and obj_player.x <= 1400 and obj_player.y > 700 and obj_player.y <= 2025){
-			_x = clamp(obj_player.x - view_width / 2, 0, 1400 - view_width);
-			_y = clamp(obj_player.y - view_height / 2, 700, 2000 - view_height);
 			assigned = true;
 		}
 		else {
