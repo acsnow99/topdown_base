@@ -95,14 +95,6 @@
             }
         },
         {
-            "Key": "204c9f53-48bf-4fb4-b6d2-e957b364c0dc",
-            "Value": {
-                "id": "58e502c4-3da7-44d7-9a1c-3f31b5e294c1",
-                "resourcePath": "rooms\/room_exploreAgain\/room_exploreAgain.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "25a75362-ee61-410c-8dc6-648b7f0b484c",
             "Value": {
                 "id": "415b5bda-d730-4871-91d6-6db71a3fea7a",
@@ -164,6 +156,14 @@
                 "id": "b79d1f6f-3204-455c-877d-56545fbd0708",
                 "resourcePath": "views\/65bda0bc-c2ee-4f97-887c-00464c910751.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6e1563bf-a6da-4e4d-aa15-c770a2fe37eb",
+            "Value": {
+                "id": "8c546f34-5f6a-428d-aaf4-11a7a57ff1a6",
+                "resourcePath": "rooms\/room_exploreAgain\/room_exploreAgain.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -234,7 +234,7 @@
             "Key": "a2099364-5c02-453f-a987-71bd541b3dff",
             "Value": {
                 "id": "fd222956-2824-4621-85a0-0ad5a8e810cc",
-                "resourcePath": "notes\\People are Trees.yy",
+                "resourcePath": "notes\/People are Trees.yy",
                 "resourceType": "GMNotes"
             }
         },

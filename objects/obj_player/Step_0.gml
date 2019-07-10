@@ -28,19 +28,19 @@ if (room_change == false and immovable == false){ //if they aren't going through
 }
 else if (alarmvar_rightside > 0) { //move in a certain direction if they just entered a room
 	alarmvar_rightside--
-	x -= 2;
+	x -= 6;
 }
 else if (alarmvar_leftside > 0) {
 	alarmvar_leftside--
-	x += 2;
+	x += 6;
 }
 else if (alarmvar_bottomside > 0) {
 	alarmvar_bottomside--
-	y -= 2;
+	y -= 6;
 }
 else if (alarmvar_topside > 0) {
 	alarmvar_topside--
-	y += 2;
+	y += 6;
 }
 else if alarm1_activated == false { //only activates the alarm effect once, so room_change isn't permanently false
 	room_change = false;
