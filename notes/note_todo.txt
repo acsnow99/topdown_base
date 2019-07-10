@@ -16,3 +16,7 @@
   -Interaction with obstacles
     -Knocked back
 	-I-frame
+
+-Room changing
+  -Move all room-change code to obj_control using with(obj_player) functions to avoid spaghetti
+  -Set up a small labyrinth(3x3 grid)
