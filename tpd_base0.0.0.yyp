@@ -87,19 +87,19 @@
             }
         },
         {
+            "Key": "17b382b5-bc46-43d4-ac97-c9749f9ccea4",
+            "Value": {
+                "id": "19709526-366f-4dd3-8383-2256de290a70",
+                "resourcePath": "rooms\/room_basement\/room_basement.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1b9c4f7e-e833-41fd-a207-66949660db96",
             "Value": {
                 "id": "cf8ab8b3-c4b5-4146-af4c-2b8fec8ee1c7",
                 "resourcePath": "objects\/obj_fadein\/obj_fadein.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "25a75362-ee61-410c-8dc6-648b7f0b484c",
-            "Value": {
-                "id": "415b5bda-d730-4871-91d6-6db71a3fea7a",
-                "resourcePath": "rooms\/room_basement\/room_basement.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -111,9 +111,9 @@
             }
         },
         {
-            "Key": "3c698514-fa19-4ab8-b04d-caf027c3dd3c",
+            "Key": "37db1047-7aa0-4a1c-8f51-9565cd99097d",
             "Value": {
-                "id": "ddbe98fa-ac10-483c-a917-8563b50f5c90",
+                "id": "da1f7567-6091-4afe-b25a-2d6eda3c5290",
                 "resourcePath": "rooms\/room_exploreAThirdTime\/room_exploreAThirdTime.yy",
                 "resourceType": "GMRoom"
             }
