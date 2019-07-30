@@ -21,7 +21,7 @@ if (room_change == false) {
 	
 		global.playerx = -25;
 		if (room == 1) {
-			global.playery = 1825;
+			global.playery = 1100;
 			room_coming = room_explore;
 		}	
 	}
