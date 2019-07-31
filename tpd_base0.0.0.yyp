@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "253c611e-ea11-485b-88ef-12c19b253071",
+            "Value": {
+                "id": "bac9ab1d-1579-4eec-9461-020ba637076e",
+                "resourcePath": "sprites\/spr_pit\/spr_pit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "33aa80ce-d8f8-4373-9f97-686c27ba4466",
             "Value": {
                 "id": "69f2234c-27eb-4001-80f2-992e20e63a7b",
@@ -116,6 +124,22 @@
                 "id": "da1f7567-6091-4afe-b25a-2d6eda3c5290",
                 "resourcePath": "rooms\/room_exploreAThirdTime\/room_exploreAThirdTime.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "391feb04-5c52-4ad4-97e7-0ac94e57d870",
+            "Value": {
+                "id": "484dc79f-751f-4c1b-ab66-7d9c79a5b104",
+                "resourcePath": "objects\/obj_pit_bottomless_center\/obj_pit_bottomless_center.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4b8e3cc8-ccc5-431c-8466-3972d89c5b31",
+            "Value": {
+                "id": "9fef861d-dcf3-48f6-9a6d-3b56bffb422f",
+                "resourcePath": "scripts\/scr_static_position\/scr_static_position.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -164,6 +188,14 @@
                 "id": "8c546f34-5f6a-428d-aaf4-11a7a57ff1a6",
                 "resourcePath": "rooms\/room_exploreAgain\/room_exploreAgain.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "732c267d-ff4c-47cb-8625-bba8cc90c6f0",
+            "Value": {
+                "id": "1812c751-6002-4a4a-8415-c12c47466a49",
+                "resourcePath": "objects\/obj_pit\/obj_pit.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -271,6 +303,14 @@
             }
         },
         {
+            "Key": "c799b618-9864-4921-86cd-f1d59292132c",
+            "Value": {
+                "id": "ec4839f8-33e5-4319-9e89-8633a032fb6b",
+                "resourcePath": "objects\/obj_pit_bottomless_edge\/obj_pit_bottomless_edge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "d2eebe6e-cbf6-468a-943b-06ac00cf19a0",
@@ -344,7 +384,8 @@
         }
     ],
     "script_order": [
-        "ad109c2a-a500-47e5-acc8-2cd74ca3ebf7"
+        "ad109c2a-a500-47e5-acc8-2cd74ca3ebf7",
+        "4b8e3cc8-ccc5-431c-8466-3972d89c5b31"
     ],
     "tutorial": ""
 }

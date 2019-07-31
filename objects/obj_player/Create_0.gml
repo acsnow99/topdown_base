@@ -1,14 +1,14 @@
-dash = 0;
+dashing = 0;
 room_change = false;
 immovable = false;
 move_speed = 400;
 lag = false;
 ded = false;
 
-pitfall_spd = 0.075;
+pitfall_spd = 0.025;
 pitfall = false;
-spawnx_pit = 0;
-spawny_pit = 0;
+spawnx_pit = x;
+spawny_pit = y;
 
 alarmvar_rightside = 0;
 alarmvar_leftside = 0;
