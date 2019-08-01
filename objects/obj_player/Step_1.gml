@@ -19,9 +19,9 @@ else {
 
 #region state changes
 
-if (keyboard_check_pressed(vk_lshift)) {
+if (keyboard_check_pressed(vk_space)) {
 	dash_setup = true;
-	alarmvar_dash_setup = global.gametime + 0.5;
+	alarmvar_dash_setup = global.gametime + 0.3;
 }
 
 #endregion
