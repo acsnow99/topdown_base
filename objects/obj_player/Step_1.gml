@@ -13,3 +13,12 @@ if (health <= 0) {
 else {
 	ded = false;
 }
+
+#region state changes
+
+if (keyboard_check_pressed(vk_lshift)) {
+	dashing = true;
+	y -= 300;
+}
+
+#endregion

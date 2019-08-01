@@ -74,9 +74,9 @@ if (keyboard_check(vk_control)) {
 //player will get dragged into pits if they are too close and aren't jumping
 if (instance_exists(obj_pit_bottomless_edge) and distance_to_object(obj_pit_bottomless_edge) <= 100 and not dashing) {
 	
-	x = lerp(x, instance_nearest(x, y, obj_pit).x, pitfall_spd);
-	y = lerp(y, instance_nearest(x, y, obj_pit).y, pitfall_spd);
-	pitfall_spd += 0.00085;
+	x = lerp(x, instance_nearest(x, y, obj_pit_bottomless_edge).x, pitfall_spd);
+	y = lerp(y, instance_nearest(x, y, obj_pit_bottomless_edge).y, pitfall_spd);
+	pitfall_spd += 0.005;
 			
 	if (instance_exists(obj_pit_bottomless_edge) 
 		and x <= instance_nearest(x, y, obj_pit_bottomless_edge).x + 12 and x >= instance_nearest(x, y, obj_pit_bottomless_edge).x - 12 
@@ -88,10 +88,16 @@ if (instance_exists(obj_pit_bottomless_edge) and distance_to_object(obj_pit_bott
 			health -= 10;
 	}
 }
+if (place_meeting(x, y, obj_pit_bottomless_center) and not dashing) {
+	x = spawnx_pit;
+	y = spawny_pit;
+	
+	health -= 10;
+}
 
-if (distance_to_object(obj_pit) > 25) {
+if (distance_to_object(obj_pit) > 100) {
 	pitfall = false;
-	pitfall_spd = 0.075;
+	pitfall_spd = 0.025;
 }
 
 if (alarm_var2 <= global.gametime) {
@@ -111,3 +117,5 @@ if (alarm_var2 <= global.gametime) {
 	}*/
 	alarm_var2 += 50000000000000000000;
 }
+
+dashing = false;
