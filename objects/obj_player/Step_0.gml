@@ -25,6 +25,8 @@ if (dash_setup and alarmvar_dash_setup <= global.gametime) {
 if (dashing and alarmvar_dash <= global.gametime) {
 	dashing = false;
 	alarmvar_dash = global.gametime + 500000000000;
+	lag = true;
+	alarmvar_lag = global.gametime + 0.1;
 }
 
 if (dashing) {
@@ -38,7 +40,7 @@ if (dashing) {
 
 
 #region Check if they want to move
-if (not room_change and not immovable and not dash_setup and not dashing){ //if they aren't going through a door or a stairwell or using an item
+if (not room_change and not immovable and not lag and not dash_setup and not dashing){ //if they aren't going through a door or a stairwell or using an item
 	#region code from online(buttery smooth movement tutorial)
 	for (var i = 0; i < array_length_1d(movement_inputs); i++) {
 		var this_key = movement_inputs[i];
@@ -144,5 +146,10 @@ if (alarm_var2 <= global.gametime) {
 	else if room_coming == 3 {
 		room_goto(room_basement);
 	}*/
-	alarm_var2 += 50000000000000000000;
+	alarm_var2 += global.gametime + 500000000000000;
+}
+
+if (alarmvar_lag <= global.gametime) {
+	lag = false;
+	alarmvar_lag = global.gametime + 5000000000;
 }
