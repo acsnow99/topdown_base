@@ -3,12 +3,13 @@
   xSlower far away, faster closer
   xMore forgiving amount of time to escape
   -Dust particle effect to make it clear that you're being dragged in
-  -Different pits in the center of a group of pits?
+  xDifferent pits in the center of a group of pits
+  xPit spawnpoints
 
 -Dash
   -Move a certain speed for a certain amount of time
   -Compare distance to pit size
-  -Not affected by pits during dash
+  xNot affected by pits during dash
   -Use a simple bool check before actions that are different while dashing
   -Startup lag
   

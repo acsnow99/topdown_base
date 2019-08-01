@@ -63,17 +63,10 @@ if (keyboard_check(vk_control)) {
 	health = 0;
 }
 
-//set the spawn point when touching a pit boundary object
-/*with (instance_nearest(x, y, obj_spawnpoint_pit)) {
-	if (place_meeting(x, y, obj_player) and not other.jumping and not other.pitfall) {
-		other.spawnx_pit = x;
-		other.spawny_pit = y;
-	}
-}
-*/
+
 //player will get dragged into pits if they are too close and aren't jumping
 if (instance_exists(obj_pit_bottomless_edge) and distance_to_object(obj_pit_bottomless_edge) <= 100 and not dashing) {
-	
+	pitfall = true;
 	x = lerp(x, instance_nearest(x, y, obj_pit_bottomless_edge).x, pitfall_spd);
 	y = lerp(y, instance_nearest(x, y, obj_pit_bottomless_edge).y, pitfall_spd);
 	pitfall_spd += 0.005;
@@ -99,6 +92,16 @@ if (distance_to_object(obj_pit) > 100) {
 	pitfall = false;
 	pitfall_spd = 0.025;
 }
+
+
+//set the spawn point when touching a pit boundary object
+with (instance_nearest(x, y, obj_spawnpoint_pit)) {
+	if (place_meeting(x, y, obj_player) and not other.dashing and not other.pitfall) {
+		other.spawnx_pit = x;
+		other.spawny_pit = y;
+	}
+}
+
 
 if (alarm_var2 <= global.gametime) {
 	room_goto(room_coming);
