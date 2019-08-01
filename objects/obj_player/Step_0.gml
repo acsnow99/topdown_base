@@ -1,4 +1,13 @@
 /// Checks/calculations that happen every step
+if (not dashing) {
+	for (var i = 0; i < array_length_1d(movement_inputs); i++) {
+		if keyboard_check(movement_inputs[i]) {
+			dash_direction = movement_inputs[i];
+		}
+	}
+}
+
+
 #region code from online(buttery smooth movement tutorial)
 var move_speed_current = move_speed * global.dt_steady;
 
@@ -7,8 +16,29 @@ var move_yinput = 0;
 #endregion
 
 
+if (dash_setup and alarmvar_dash_setup <= global.gametime) {
+	dash_setup = false;
+	dashing = true;
+	alarmvar_dash = global.gametime + 0.1;
+	alarmvar_dash_setup = global.gametime + 500000000000;
+}
+if (dashing and alarmvar_dash <= global.gametime) {
+	dashing = false;
+	alarmvar_dash = global.gametime + 500000000000;
+}
+
+if (dashing) {
+	for (var i = 0; i < array_length_1d(movement_inputs); i++) {
+		if (dash_direction == movement_inputs[i]) {
+			var dash_angle = directions[i];
+		}
+	} 
+	scr_move(move_speed_current * 10, dash_angle);
+}
+
+
 #region Check if they want to move
-if (room_change == false and immovable == false){ //if they aren't going through a door or a stairwell or using an item
+if (not room_change and not immovable and not dash_setup and not dashing){ //if they aren't going through a door or a stairwell or using an item
 	#region code from online(buttery smooth movement tutorial)
 	for (var i = 0; i < array_length_1d(movement_inputs); i++) {
 		var this_key = movement_inputs[i];
@@ -57,10 +87,6 @@ if (alarmvar_roomchange <= global.gametime) {
 //auto-heal
 if (health <= 100) {
 	health += 0.1;
-}
-
-if (keyboard_check(vk_control)) {
-	health = 0;
 }
 
 
@@ -120,5 +146,3 @@ if (alarm_var2 <= global.gametime) {
 	}*/
 	alarm_var2 += 50000000000000000000;
 }
-
-dashing = false;

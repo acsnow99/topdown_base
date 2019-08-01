@@ -7,11 +7,11 @@
   xPit spawnpoints
 
 -Dash
-  -Move a certain speed for a certain amount of time
-  -Compare distance to pit size
+  xMove a certain speed for a certain amount of time
+  xCompare distance to pit size
   xNot affected by pits during dash
-  -Use a simple bool check before actions that are different while dashing
-  -Startup lag
+  xUse a simple bool check before actions that are different while dashing
+  xStartup lag
   
 -Damage
   -Interaction with obstacles
