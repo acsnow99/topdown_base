@@ -1,6 +1,9 @@
+//self-destruct button
 if (keyboard_check(vk_control)) {
 	health = 0;
 }
+
+//death protocol
 if (health <= 0) {
 	x = -1;
 	y = -1;
@@ -19,9 +22,9 @@ else {
 
 #region state changes
 
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check_pressed(vk_space) and not pitfall) {
 	dash_setup = true;
-	alarmvar_dash_setup = global.gametime + 0.3;
+	alarmvar_dash_setup = global.gametime + 0.2;
 }
 
 #endregion
