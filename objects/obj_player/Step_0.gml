@@ -2,9 +2,21 @@
 
 //reset current input for next dash every step(dash goes in most recently inputted direction
 if (not dashing) {
-	for (var i = 0; i < array_length_1d(movement_inputs); i++) {
-		if keyboard_check(movement_inputs[i]) {
-			dash_direction = movement_inputs[i];
+	for (var i = 0; i < 4; i++) {
+		if (i == 3) {
+			var other_input = 0;
+		}
+		else {
+			var other_input = i + 1;
+		}
+		if (keyboard_check(movement_inputs[i])) {
+			if (keyboard_check(movement_inputs[other_input])) {
+				dash_direction = movement_inputs[i+4];
+				break;
+			}
+			else {
+				dash_direction = movement_inputs[i];
+			}
 		}
 	}
 }
@@ -48,7 +60,7 @@ if (dashing) {
 #region Check if they want to move
 if (not room_change and not immovable and not lag and not dash_setup and not dashing){ //if they aren't going through a door or a stairwell or using an item
 	#region code from online(buttery smooth movement tutorial)
-	for (var i = 0; i < array_length_1d(movement_inputs); i++) {
+	for (var i = 0; i < 4; i++) {
 		var this_key = movement_inputs[i];
 		if keyboard_check(this_key) {
 			var this_angle = i * 90;
@@ -64,21 +76,17 @@ if (not room_change and not immovable and not lag and not dash_setup and not das
 	}
 	#endregion
 }
-else if (alarmvar_rightside > 0) { //move in a certain direction if they just entered a room
-	alarmvar_rightside--
-	x -= 6;
+else if (alarmvar_rightside > global.gametime) { //move in a certain direction if they just entered a room
+	x -= 360 * global.dt_steady;
 }
-else if (alarmvar_leftside > 0) {
-	alarmvar_leftside--
-	x += 6;
+else if (alarmvar_leftside > global.gametime) {
+	x += 360 * global.dt_steady;
 }
-else if (alarmvar_bottomside > 0) {
-	alarmvar_bottomside--
-	y -= 6;
+else if (alarmvar_bottomside > global.gametime) {
+	y -= 360 * global.dt_steady;
 }
-else if (alarmvar_topside > 0) {
-	alarmvar_topside--
-	y += 6;
+else if (alarmvar_topside > global.gametime) {
+	y += 360 * global.dt_steady;
 }
 else if alarm1_activated == false { //only activates the alarm effect once, so room_change isn't permanently false
 	room_change = false;
