@@ -37,7 +37,7 @@ if (dash_setup and alarmvar_dash_setup <= global.gametime) {
 	alarmvar_dash = global.gametime + 0.075;
 	alarmvar_dash_setup = global.gametime + 500000000000;
 }
-if (dashing and alarmvar_dash <= global.gametime) {
+if (dashing and alarmvar_dash <= global.gametime and not knockback) {
 	if (instance_exists(obj_pit_bottomless_edge) and distance_to_object(obj_pit_bottomless_edge) <= 100) {
 		pitfall = true;
 	}
@@ -47,7 +47,7 @@ if (dashing and alarmvar_dash <= global.gametime) {
 	alarmvar_lag = global.gametime + 0.07;
 }
 
-if (dashing) {
+if (dashing and not knockback) {
 	for (var i = 0; i < array_length_1d(movement_inputs); i++) {
 		if (dash_direction == movement_inputs[i]) {
 			var dash_angle = directions[i];
@@ -97,9 +97,17 @@ else if alarm1_activated == false { //only activates the alarm effect once, so r
 
 #region what happens when you get damaged
 if (knockback) {
-	//get knocked back at the angle
+	if dashing {
+		var stop_knockback = 0.7;
+	}
+	else {
+		var stop_knockback = 0.75;
+	}
+	
+	//get knocked back at the angle calculated at the time of getting hit(begin step)
 	scr_move(move_speed_current * 10, knockback_angle);
-	if (alarmvar_attacked <= global.gametime + 0.75 and not place_meeting(x, y, current_attacker)) {
+	
+	if (alarmvar_attacked <= global.gametime + stop_knockback and not place_meeting(x, y, current_attacker)) {
 		knockback = false;
 	}
 }

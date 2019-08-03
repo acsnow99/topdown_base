@@ -1,14 +1,14 @@
 var right = false, up = false, left = false, down = false
-if (instance_position(x+256, y, argument0) or instance_position(x+130, y, obj_wall_parent)) {
+if (instance_position(x+256, y, argument0) or instance_position(x+130, y, argument4) or instance_position(x+256, y, argument5)) {
 	right = true;
 }
-if (instance_position(x, y-256, argument0) or instance_position(x, y-130, obj_wall_parent)) {
+if (instance_position(x, y-256, argument0) or instance_position(x, y-130, argument4) or instance_position(x, y-256, argument5)) {
 	up = true;
 }
-if (instance_position(x-256, y, argument0) or instance_position(x-130, y, obj_wall_parent)) {
+if (instance_position(x-256, y, argument0) or instance_position(x-130, y, argument4) or instance_position(x-256, y, argument5)) {
 	left = true;
 }
-if (instance_position(x, y+256, argument0) or instance_position(x, y+130, obj_wall_parent)) {
+if (instance_position(x, y+256, argument0) or instance_position(x, y+130, argument4) or instance_position(x, y+256, argument5)) {
 	down = true;
 }
 
