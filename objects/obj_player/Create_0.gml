@@ -5,11 +5,16 @@ immovable = false;
 move_speed = 400;
 lag = false;
 ded = false;
+vulnerable = true;
+knockback = false;
 
 pitfall_spd = 0.025;
 pitfall = false;
 spawnx_pit = x;
 spawny_pit = y;
+
+current_attacker = instance_nearest(x, y, obj_pain);
+knockback_angle = 0;
 
 alarmvar_rightside = 0;
 alarmvar_leftside = 0;
@@ -19,6 +24,7 @@ alarmvar_roomchange = 0;
 alarmvar_dash_setup = 0;
 alarmvar_dash = 0;
 alarmvar_lag = 0;
+alarmvar_attacked = 0;
 alarm1_activated = false;
 alarm_var2 = 5000000000000000;
 

@@ -1,5 +1,6 @@
 /// Checks/calculations that happen every step
 
+
 //reset current input for next dash every step(dash goes in most recently inputted direction
 if (not dashing) {
 	for (var i = 0; i < 4; i++) {
@@ -93,17 +94,32 @@ else if alarm1_activated == false { //only activates the alarm effect once, so r
 	alarm1_activated = true;
 }
 
+
+#region what happens when you get damaged
+if (knockback) {
+	//get knocked back at the angle
+	scr_move(move_speed_current * 10, knockback_angle);
+	if (alarmvar_attacked <= global.gametime + 0.75 and not place_meeting(x, y, current_attacker)) {
+		knockback = false;
+	}
+}
+else if (alarmvar_attacked <= global.gametime) {
+	vulnerable = true;
+	alarmvar_attacked = global.gametime + 500000000000;
+}
+
 #endregion
 
 if (alarmvar_roomchange <= global.gametime) {
 	room_change = false;
 	alarmvar_roomchange += 50000000000000000000;
 }
+#endregion
 
 //auto-heal
-if (health <= 100) {
+/*if (health <= 100) {
 	health += 0.1;
-}
+}*/
 
 
 //player will get dragged into pits if they are too close and aren't dashing
@@ -126,6 +142,9 @@ if (instance_exists(obj_pit_bottomless_edge) and distance_to_object(obj_pit_bott
 			x = spawnx_pit;
 			y = spawny_pit;
 			
+			vulnerable = false;
+			alarmvar_attacked = global.gametime + 0.75;
+			
 			health -= 10;
 	}
 }
@@ -133,6 +152,9 @@ if (instance_exists(obj_pit_bottomless_edge) and distance_to_object(obj_pit_bott
 if (place_meeting(x, y, obj_pit_bottomless_center) and not dashing) {
 	x = spawnx_pit;
 	y = spawny_pit;
+	
+	vulnerable = false;
+	alarmvar_attacked = global.gametime + 0.75;
 	
 	health -= 10;
 }

@@ -1,7 +1,7 @@
 #macro view view_camera[0]
 camera_set_view_size(view, view_width, view_height);
 
-if (instance_exists(obj_player) and not (obj_player.x == 1 and obj_player.y == 1)){
+if (instance_exists(obj_player) and not (obj_player.x == -1 and obj_player.y == -1)){
 	
 	var _x;
 	var _y;
