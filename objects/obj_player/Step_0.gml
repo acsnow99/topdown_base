@@ -78,16 +78,16 @@ if (not room_change and not immovable and not lag and not dash_setup and not das
 	#endregion
 }
 else if (alarmvar_rightside > global.gametime) { //move in a certain direction if they just entered a room
-	x -= 360 * global.dt_steady;
+	x -= move_speed_current;
 }
 else if (alarmvar_leftside > global.gametime) {
-	x += 360 * global.dt_steady;
+	x += move_speed_current;
 }
 else if (alarmvar_bottomside > global.gametime) {
-	y -= 360 * global.dt_steady;
+	y -= move_speed_current;
 }
 else if (alarmvar_topside > global.gametime) {
-	y += 360 * global.dt_steady;
+	y += move_speed_current;
 }
 else if alarm1_activated == false { //only activates the alarm effect once, so room_change isn't permanently false
 	room_change = false;
@@ -107,13 +107,14 @@ if (knockback) {
 	//get knocked back at the angle calculated at the time of getting hit(begin step)
 	scr_move(move_speed_current * 10, knockback_angle);
 	
-	if (alarmvar_attacked <= global.gametime + stop_knockback and not place_meeting(x, y, current_attacker)) {
+	if ((alarmvar_attacked <= global.gametime + stop_knockback or alarmvar_attacked_while_invulnerable <= global.gametime + stop_knockback) and not place_meeting(x, y, current_attacker)) {
 		knockback = false;
 	}
 }
-else if (alarmvar_attacked <= global.gametime) {
+else if (alarmvar_attacked <= global.gametime or alarmvar_attacked_while_invulnerable <= global.gametime) {
 	vulnerable = true;
 	alarmvar_attacked = global.gametime + 500000000000;
+	alarmvar_attacked_while_invulnerable = global.gametime + 500000000000;
 }
 
 #endregion

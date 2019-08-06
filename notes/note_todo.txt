@@ -14,9 +14,9 @@
   xStartup lag
   
 -Damage
-  -Interaction with obstacles
-    -Knocked back
-	-I-frame
+  xInteraction with obstacles
+    xKnocked back
+	xI-frames
 
 -Room changing
   -Move all room-change code to obj_control using with(obj_player) functions to avoid spaghetti

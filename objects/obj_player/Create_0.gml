@@ -25,6 +25,7 @@ alarmvar_dash_setup = 0;
 alarmvar_dash = 0;
 alarmvar_lag = 0;
 alarmvar_attacked = 0;
+alarmvar_attacked_while_invulnerable = 0;
 alarm1_activated = false;
 alarm_var2 = 5000000000000000;
 
