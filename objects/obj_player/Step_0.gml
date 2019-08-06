@@ -98,7 +98,7 @@ else if alarm1_activated == false { //only activates the alarm effect once, so r
 #region what happens when you get damaged
 if (knockback) {
 	if dashing {
-		var stop_knockback = 0.7;
+		var stop_knockback = 0.725;
 	}
 	else {
 		var stop_knockback = 0.75;
