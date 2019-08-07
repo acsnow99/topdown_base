@@ -13,7 +13,7 @@ pitfall = false;
 spawnx_pit = x;
 spawny_pit = y;
 
-current_attacker = instance_nearest(x, y, obj_pain);
+//current_attacker = instance_nearest(x, y, obj_pain);
 knockback_angle = 0;
 
 alarmvar_rightside = 0;
