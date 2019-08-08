@@ -7,4 +7,4 @@ down_left_angle = 45;
 //higher number means wider than it is tall
 right_down_angle = 135;
 
-damage = 0;
+damage = 10;

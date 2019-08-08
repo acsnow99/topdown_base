@@ -2,7 +2,7 @@
     "id": "e041838b-e67a-48fe-982b-2b3d8ef8c6b1",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_pit1",
+    "name": "spr_spike",
     "For3D": false,
     "HTile": false,
     "VTile": false,

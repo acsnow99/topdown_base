@@ -1,23 +1,23 @@
 {
-    "id": "a849eb4b-1589-4c90-9a23-93cdbe987f08",
+    "id": "dc7f7232-5932-42c7-b32c-161a63577eb2",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_pain",
+    "name": "obj_spikes_square",
     "eventList": [
         {
-            "id": "a3c89e27-c33f-4b70-9212-2c8c4a9cab25",
+            "id": "d7ccdb2b-7688-4062-9f38-dc2321dbb167",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "a849eb4b-1589-4c90-9a23-93cdbe987f08"
+            "m_owner": "dc7f7232-5932-42c7-b32c-161a63577eb2"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "a849eb4b-1589-4c90-9a23-93cdbe987f08",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

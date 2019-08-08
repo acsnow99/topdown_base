@@ -53,7 +53,7 @@ with (instance_nearest(x, y, obj_pain)) {
 		if (other.dashing and (other.dash_direction == "up_right" or other.dash_direction == "left_up" or other.dash_direction == "down_left" or other.dash_direction == "right_down")) {
 			for (var i = 0; i < array_length_1d(other.movement_inputs); i++) {
 				if (other.dash_direction == other.movement_inputs[i]) {
-					if ((other.dash_direction == "up_right" and other.knockback_angle >= up_right_angle) or (other.dash_direction == "left_up" and other.knockback_angle >= left_up_angle)  or (other.dash_direction == "down_left" and other.knockback_angle >= down_left_angle and other.knockback_angle <= 180)  or (other.dash_direction == "right_down" and other.knockback_angle >= right_down_angle)) {
+					if ((other.dash_direction == "up_right" and other.knockback_angle >= up_right_angle) or (other.dash_direction == "left_up" and (other.knockback_angle >= left_up_angle or other.knockback_angle <= 90))  or (other.dash_direction == "down_left" and other.knockback_angle >= down_left_angle and other.knockback_angle <= 180)  or (other.dash_direction == "right_down" and other.knockback_angle >= right_down_angle)) {
 						other.knockback_angle = other.directions[i] - 90;
 					}
 					else {
