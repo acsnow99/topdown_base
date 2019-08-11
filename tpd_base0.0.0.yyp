@@ -162,7 +162,7 @@
             "Key": "395d90d6-55b6-486c-a0b7-a875b964dfb4",
             "Value": {
                 "id": "81da9efc-5fb4-4bd4-ab9d-1d1fa0ff4826",
-                "resourcePath": "sprites\/spr_PlayerIdle_Dev\/spr_PlayerIdle_Dev.yy",
+                "resourcePath": "sprites\/spr_playeridle_dev\/spr_playeridle_dev.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -450,7 +450,7 @@
             "Key": "f68334b6-a1f3-4530-a080-ef54c15e3fce",
             "Value": {
                 "id": "5e3ea830-6f84-4953-81a2-686f3f95568c",
-                "resourcePath": "sprites\/spr_PlayerDash_Dev\/spr_PlayerDash_Dev.yy",
+                "resourcePath": "sprites\/spr_playerdash_dev\/spr_playerdash_dev.yy",
                 "resourceType": "GMSprite"
             }
         },

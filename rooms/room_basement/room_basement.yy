@@ -39,8 +39,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Walls",
-            "id": "20e2f752-6300-4b4c-96fb-f7f41cde7817",
+            "name": "Player",
+            "id": "0120d7b2-7997-4c95-bd1b-3d7be9462889",
             "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
@@ -65,8 +65,8 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Player",
-            "id": "0120d7b2-7997-4c95-bd1b-3d7be9462889",
+            "name": "Walls",
+            "id": "20e2f752-6300-4b4c-96fb-f7f41cde7817",
             "depth": 200,
             "grid_x": 32,
             "grid_y": 32,

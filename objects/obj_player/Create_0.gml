@@ -49,4 +49,7 @@ directions[6] = 225;
 directions[7] = 315;
 dash_direction = vk_right;
 
+animation_frame_dash = 0;
+animation_alarm_dash = 0;
+
 health = 100;
