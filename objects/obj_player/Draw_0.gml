@@ -16,10 +16,10 @@ else {
 	}
 	if (animation_alarm_dash <= global.gametime) {
 		animation_frame_dash++;
-		animation_alarm_dash = global.gametime + 0.05;
+		animation_alarm_dash = global.gametime + 0.025;
 	}
 	
-	image_index += animation_frame_dash * 4;
+	image_index += animation_frame_dash * 8;
 	draw_sprite(spr_playerdash_dev, image_index, x, y);
 }
 
