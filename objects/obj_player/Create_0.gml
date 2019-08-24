@@ -31,10 +31,10 @@ alarm_var2 = 5000000000000000;
 
 room_coming = 0;
 
-movement_inputs[0] = vk_right;
-movement_inputs[1] = vk_up;
-movement_inputs[2] = vk_left;
-movement_inputs[3] = vk_down;
+movement_inputs[0] = ord("D");
+movement_inputs[1] = ord("W");
+movement_inputs[2] = ord("A");
+movement_inputs[3] = ord("S");
 movement_inputs[4] = "up_right";
 movement_inputs[5] = "left_up";
 movement_inputs[6] = "down_left";
@@ -47,7 +47,7 @@ directions[4] = 45;
 directions[5] = 135;
 directions[6] = 225;
 directions[7] = 315;
-dash_direction = vk_right;
+dash_direction = ord("D");
 
 animation_frame_dash = 0;
 animation_alarm_dash = 0;
