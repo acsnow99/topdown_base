@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "81808a27-cd99-4fb0-8899-23ac2153965d",
+            "Value": {
+                "id": "f3fcee5f-0dee-44ec-8177-375eb1da9848",
+                "resourcePath": "objects\/obj_enemy_grounded\/obj_enemy_grounded.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "85e00877-2e9c-469b-84d2-87d732868799",
             "Value": {
                 "id": "9d5d0bc6-96c8-4c42-bf35-1e77d6fca05c",
@@ -391,6 +399,14 @@
             }
         },
         {
+            "Key": "cb487095-a064-4de8-9859-5696573039f5",
+            "Value": {
+                "id": "00f8d095-37a3-4323-816f-4c69467d4faa",
+                "resourcePath": "scripts\/scr_move_detect_obstacles\/scr_move_detect_obstacles.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "d2eebe6e-cbf6-468a-943b-06ac00cf19a0",
@@ -434,7 +450,7 @@
             "Key": "dfcbc9e1-c81f-4105-8f29-44bd9f39fd88",
             "Value": {
                 "id": "16f3ff53-4b64-460a-8b5c-7e4cded92fe0",
-                "resourcePath": "objects\/obj_enemy\/obj_enemy.yy",
+                "resourcePath": "objects\/obj_enemy_flying\/obj_enemy_flying.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -505,6 +521,7 @@
     ],
     "script_order": [
         "ad109c2a-a500-47e5-acc8-2cd74ca3ebf7",
+        "cb487095-a064-4de8-9859-5696573039f5",
         "4b8e3cc8-ccc5-431c-8466-3972d89c5b31"
     ],
     "tutorial": ""
