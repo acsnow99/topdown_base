@@ -13,7 +13,8 @@ move_speed = 350;
 //random seed to make a 1 in 4 chance of the enemy moving in each direction; 
 //resets every rotation through the alarm
 seed = random(5);
-alarmvar_movement = global.gametime+ 2;
+alarmvar_movement = global.gametime+ 1.5;
+move = false;
 walking = true;
 crossed_border = false;
 

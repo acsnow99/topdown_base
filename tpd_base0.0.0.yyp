@@ -415,14 +415,6 @@
             }
         },
         {
-            "Key": "cb487095-a064-4de8-9859-5696573039f5",
-            "Value": {
-                "id": "00f8d095-37a3-4323-816f-4c69467d4faa",
-                "resourcePath": "scripts\/scr_move_detect_obstacles\/scr_move_detect_obstacles.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "d2eebe6e-cbf6-468a-943b-06ac00cf19a0",
@@ -537,7 +529,6 @@
     ],
     "script_order": [
         "ad109c2a-a500-47e5-acc8-2cd74ca3ebf7",
-        "cb487095-a064-4de8-9859-5696573039f5",
         "4b8e3cc8-ccc5-431c-8466-3972d89c5b31"
     ],
     "tutorial": ""
