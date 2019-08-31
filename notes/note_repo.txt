@@ -1,1 +1,3 @@
 https://github.com/acsnow99/topdown_base.git
+
+Enemies have different AI, will react correctly to walls

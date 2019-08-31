@@ -14,7 +14,9 @@ move_speed = 350;
 //resets every rotation through the alarm
 seed = random(5);
 alarmvar_movement = global.gametime+ 2;
+move = false;
 walking = true;
 crossed_border = false;
+move_direction = move_speed * global.dt_steady;
 
 animation_alarm_walking = global.gametime + 0.2;
