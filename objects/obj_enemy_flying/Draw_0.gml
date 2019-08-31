@@ -11,7 +11,7 @@ if (animation_alarm_walking <= global.gametime and walking) {
 }
 
 
-draw_sprite(spr_enemy_dev, image_index, x, y);
+draw_sprite(spr_enemy_dev1_fly, image_index, x, y);
 
 //appears higher above other objects as they go down they screen
 if (y != yprevious) {
