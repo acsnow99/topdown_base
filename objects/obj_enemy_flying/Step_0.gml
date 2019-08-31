@@ -2,7 +2,7 @@ var move_speed_current = move_speed * global.dt_steady;
 
 walking = (alarmvar_movement >= global.gametime + 0.75)
 
-if ((x < room_width - 128) and (y > 128) and (x > 128) and (y < room_height - 128) and not place_meeting(x, y, obj_wall_parent) and not place_meeting(x, y, obj_pain)) {
+if ((x < room_width - 128) and (y > 128) and (x > 128) and (y < room_height - 128) and (distance_to_object(obj_wall_parent) > 32) and (distance_to_object(obj_pain) > 32)) {
 	var crossed_border = false;
 }
 else {

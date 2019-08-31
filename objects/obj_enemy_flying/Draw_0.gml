@@ -1,6 +1,6 @@
 //trigger to go to the second frame of the animation; 
 //only activates in the walking phase of the loop
-if (animation_alarm_walking <= global.gametime and walking) {
+if (animation_alarm_walking <= global.gametime) {
 	if (image_index == 0) {
 		image_index++;
 	}
