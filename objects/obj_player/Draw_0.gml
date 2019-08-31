@@ -23,4 +23,8 @@ else {
 	draw_sprite(spr_playerdash_dev, image_index, x, y);
 }
 
-draw_text(camera_get_view_x(view) + 50, camera_get_view_y(view) + 50, health);
+
+//appears higher above other objects as they go down they screen
+if (y != yprevious) {
+	depth = -y;
+}

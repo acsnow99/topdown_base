@@ -24,3 +24,13 @@
   
 -Spawn point object
   -Sets spawnx and spawny in control object at collision with player
+  
+-Enemies
+  -One that moves around randomly, stop and changes direction randomly
+  -One that moves around on a path(in a circle)
+  -One that locks onto the player and executes an attack
+  
+-Weapon
+  -Seperate object for whip attack
+  -Knock back enemies
+  -Damage system for enemies
